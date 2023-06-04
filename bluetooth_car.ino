@@ -21,10 +21,10 @@ void loop() {
     char command = bluetooth.read();  // Read the command from Bluetooth
     Serial.println(command);          // Print the received command to the serial monitor
 
-    if (command == 'B') {  // Move forward
+    if (command == 'B') {  // Move backward
       digitalWrite(motorPin1, HIGH);
       digitalWrite(motorPin2, LOW);
-    } else if (command == 'F') {  // Move backward
+    } else if (command == 'F') {  // Move forward
       digitalWrite(motorPin1, LOW);
       digitalWrite(motorPin2, HIGH);
     } else if (command == 'S') {  // Stop
